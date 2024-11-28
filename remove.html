@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hapus Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white border-b-4 border-gray-800 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <a href="index.html" class="text-2xl font-bold text-gray-800">PenghapusBG</a>
+        <ul class="flex space-x-6 text-lg font-medium">
+          <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+          <li><a href="about.html" class="hover:text-blue-500">Tentang</a></li>
+          <li><a href="remove.html" class="hover:text-blue-500">Hapus Background</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Remove Background Section -->
+    <div class="container mx-auto mt-10 p-6 bg-white shadow-lg border-4 border-gray-800 rounded-lg">
+      <h1 class="text-4xl font-bold text-gray-800">Hapus Background</h1>
+      <p class="text-lg mt-4">Unggah gambar Anda, dan hapus latar belakangnya secara otomatis.</p>
+
+      <!-- Upload Section -->
+      <div class="mt-6">
+        <input type="file" id="imageUploader" accept="image/*" class="block mx-auto py-2 px-4 border border-gray-800 rounded-lg" />
+        <button id="removeBackground" class="mt-4 bg-gray-900 text-white py-2 px-6 rounded-lg shadow hover:bg-gray-700" disabled style="display: none">Hapus Background</button>
+      </div>
+
+      <!-- Preview Section -->
+      <div id="previewSection" class="mt-10 text-center hidden">
+        <h2 class="text-2xl font-bold">Preview Gambar</h2>
+        <img id="previewImage" alt="Preview Gambar" class="mt-4 rounded-lg shadow-lg mx-auto max-w-md" />
+      </div>
+
+      <!-- Output Section -->
+      <div id="output" class="mt-10 text-center hidden">
+        <h2 class="text-2xl font-bold">Hasil Gambar</h2>
+        <img id="resultImage" alt="Hasil Penghapusan Background" class="mt-4 rounded-lg shadow-lg mx-auto" />
+        <a id="downloadLink" class="mt-4 inline-block bg-blue-500 text-white py-2 px-6 rounded-lg shadow hover:bg-blue-700" download="hasil.png"> Unduh Gambar </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4 mt-10">
+      <div class="container mx-auto text-center">
+        <p>© 2024 PenghapusBG. Dibangun dengan ❤️ oleh Anda.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
